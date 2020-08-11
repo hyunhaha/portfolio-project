@@ -1,0 +1,28 @@
+@charset "UTF-8";
+body {
+  position: relative;
+}
+header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 66px;
+  background-color: rgba(64, 64, 64, 75%);
+  padding: 0 100px;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #e0e4eb;
+  color: #70757d;
+  font-size: 18px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 80px;
+  height: 80px;
+}
