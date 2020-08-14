@@ -114,10 +114,33 @@ header .img__wrap .img__box {
   width: 230px;
   height: 230px;
   display: inline-block;
-  background: url(/projectB/image/thumbnail_apple.jpg);
+  /* background: url(/projectB/image/thumbnail_apple.jpg); */
   border-radius: 10px;
 }
-
+.store .list__wrap .item__link.apple {
+  background: url(/projectB/image/thumbnail_apple.jpg);
+}
+.store .list__wrap .item__link.onion {
+  background: url(/projectB/image/thumbnail_onion.jpg);
+}
+.store .list__wrap .item__link.banana {
+  background: url(/projectB/image/thumbnail_banana.jpg);
+}
+.store .list__wrap .item__link.kiwi {
+  background: url(/projectB/image/thumbnail_kiwi.jpg);
+}
+.store .list__wrap .item__link.broccoli {
+  background: url(/projectB/image/thumbnail_broccoli.jpg);
+}
+.store .list__wrap .item__link.lemon {
+  background: url(/projectB/image/thumbnail_lemon.jpg);
+}
+.store .list__wrap .item__link.garlic {
+  background: url(/projectB//image/thumbnail_garlic.jpg);
+}
+.store .list__wrap .item__link.tomato {
+  background: url(/projectB/image/thumbnail_tomato.jpg);
+}
 .store .dimmed__layer {
   position: absolute;
   display: none;
@@ -155,14 +178,21 @@ header .img__wrap .img__box {
   flex-direction: column;
   justify-content: center;
 }
+.store .item__info .item__info__title {
+  width: 230px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
 .store .price__num {
   font-size: 28px;
   line-height: 38px;
   font-weight: bold;
+  margin: 0 -4px;
 }
-.store .price__won {
-  margin: 0 -3px;
-}
+
 footer {
   background-color: #e0e4eb;
   color: #70757d;
