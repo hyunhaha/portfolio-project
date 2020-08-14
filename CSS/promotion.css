@@ -1,23 +1,169 @@
 @charset "UTF-8";
-body {
+
+* {
+  font-family: "나눔 고딕", NanumGothic, "돋움", Dotum, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+html,
+body,
+.wrap {
   position: relative;
+}
+.blind {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
 }
 header {
   position: fixed;
-  display: flex;
-  align-items: center;
   top: 0;
   right: 0;
   left: 0;
   height: 66px;
   background-color: rgba(64, 64, 64, 75%);
-  padding: 0 100px;
+  z-index: 100;
+}
+header .img__wrap {
+  width: 980px;
+  height: 66px;
+  margin: 0 auto;
+}
+header .img__wrap a {
+  display: inline-block;
+}
+header .img__wrap .img__box {
+  background: url(/projectB/image/logo.png) no-repeat;
+  height: 66px;
+  width: 110px;
+  background-position: center;
+  background-size: contain;
+}
+.wrap__section {
+  min-height: 100%;
+  width: 100%;
+}
+
+.title .img__wrap {
+  background-color: #fff;
+  height: 750px;
+}
+
+.title .img__wrap .img__box {
+  height: 750px;
+  background: url(/projectB/image/section_invite.jpg) no-repeat;
+  background-position: center;
+}
+.creator .img__wrap {
+  background-color: #f9939d;
+  height: 822px;
+}
+.creator .img__wrap .img__box {
+  height: 822px;
+  background: url(/projectB/image/section_creator.jpg) no-repeat;
+  background-position: center;
+}
+.store {
+  position: relative;
+}
+.store .store__wrap {
+  background-color: #d5e43f;
+  height: 1084px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.store .list__wrap {
+  position: relative;
+  background: url(/projectB/image/section_store.jpg) no-repeat;
+  background-position: center;
+  height: 1084px;
+}
+.store .list__wrap .store__list {
+  width: 980px;
+  height: 740px;
+  margin: 0 auto;
+  padding-top: 300px;
+}
+.store .list__wrap li {
+  float: left;
+  position: relative;
+}
+.store .list__wrap .store__list::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.store .list__wrap li + li {
+  margin-left: 20px;
+}
+.store .list__wrap li:nth-child(4n + 1) {
+  margin-left: 0;
+}
+.store .list__wrap .item__img {
+  position: relative;
+  width: 230px;
+  height: 230px;
+}
+
+.store .list__wrap .item__link {
+  position: relative;
+  width: 230px;
+  height: 230px;
+  display: inline-block;
+  background: url(/projectB/image/thumbnail_apple.jpg);
+  border-radius: 10px;
+}
+
+.store .dimmed__layer {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  background-color: rgba(96, 132, 2, 0.9);
+  border-radius: 10px;
+  width: 230px;
+  height: 230px;
+}
+.store .list__wrap .item__img:hover .dimmed__layer {
+  display: flex;
+}
+.store .sale {
+  font-size: 65px;
+  line-height: 68px;
+  font-weight: bold;
+  color: #fff;
+}
+.store .sale__time {
+  font-size: 20px;
+  line-height: 24px;
+  color: #fff;
+}
+.store .list__wrap .item__info {
+  font-size: 20px;
+  line-height: 30px;
+  height: 140px;
+  color: #1b1d21;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.store .price__num {
+  font-size: 28px;
+  line-height: 38px;
+  font-weight: bold;
+}
+.store .price__won {
+  margin: 0 -3px;
 }
 footer {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
   background-color: #e0e4eb;
   color: #70757d;
   font-size: 18px;
@@ -25,4 +171,7 @@ footer {
   vertical-align: middle;
   line-height: 80px;
   height: 80px;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
