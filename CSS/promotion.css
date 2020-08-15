@@ -114,33 +114,12 @@ header .img__wrap .img__box {
   width: 230px;
   height: 230px;
   display: inline-block;
-  /* background: url(/projectB/image/thumbnail_apple.jpg); */
   border-radius: 10px;
 }
-.store .list__wrap .item__link.apple {
-  background: url(/projectB/image/thumbnail_apple.jpg);
+.store .list__wrap .item__link img {
+  border-radius: 10px;
 }
-.store .list__wrap .item__link.onion {
-  background: url(/projectB/image/thumbnail_onion.jpg);
-}
-.store .list__wrap .item__link.banana {
-  background: url(/projectB/image/thumbnail_banana.jpg);
-}
-.store .list__wrap .item__link.kiwi {
-  background: url(/projectB/image/thumbnail_kiwi.jpg);
-}
-.store .list__wrap .item__link.broccoli {
-  background: url(/projectB/image/thumbnail_broccoli.jpg);
-}
-.store .list__wrap .item__link.lemon {
-  background: url(/projectB/image/thumbnail_lemon.jpg);
-}
-.store .list__wrap .item__link.garlic {
-  background: url(/projectB//image/thumbnail_garlic.jpg);
-}
-.store .list__wrap .item__link.tomato {
-  background: url(/projectB/image/thumbnail_tomato.jpg);
-}
+
 .store .dimmed__layer {
   position: absolute;
   display: none;
@@ -191,6 +170,137 @@ header .img__wrap .img__box {
   line-height: 38px;
   font-weight: bold;
   margin: 0 -4px;
+}
+.recipe .recipe__wrap {
+  position: relative;
+  background-color: #b893f9;
+  height: 1030px;
+  background-image: url(/projectB/image/pattern_recipe.png);
+  background-repeat: repeat-x;
+  background-position: center;
+}
+.recipe .recipe__img {
+  position: relative;
+  background: url(/projectB/image/section_recipe.png) no-repeat;
+  background-position: center 30%;
+  height: 1030px;
+}
+.recipe .recipe__img .recipe__link {
+  position: relative;
+  width: 980px;
+  height: 1030px;
+  margin: 0 auto;
+}
+.recipe .link__box {
+  width: 480px;
+  height: 482px;
+  float: left;
+  margin-top: 304px;
+
+  background-color: rgba(96, 132, 2, 0.9);
+}
+.recipe .link__box + .link__box {
+  margin-left: 20px;
+}
+.recipe .link__box a {
+  width: 480px;
+  height: 482px;
+  display: inline-block;
+}
+.recipe .look__recipe {
+  width: 310px;
+  height: 1030px;
+  margin: 0 auto;
+}
+.recipe .look__recipe a {
+  background: url(/projectB/image/go_recipe.gif) no-repeat;
+  background-position: center 90%;
+  display: inline-block;
+  width: 310px;
+  height: 91px;
+  margin-top: 60px;
+}
+.recipe .look__recipe a:hover {
+  background: url(/projectB/image/go_recipe_over.gif);
+}
+.faq .faq__wrap {
+  background-color: #fff;
+  padding: 100px 0;
+  width: auto;
+}
+.faq h1 {
+  background: url(/projectB/image/title_faq.gif) no-repeat;
+  height: 98px;
+  background-position: center;
+}
+.faq ul {
+  width: 980px;
+  margin: 0 auto;
+}
+.faq .content {
+  position: relative;
+  border-top: 1px solid #a1a5ad;
+  border-bottom: 1px solid #a1a5ad;
+  vertical-align: middle;
+}
+.faq li + li .content {
+  border-top: none;
+}
+.faq .question__arrow__box {
+  position: relative;
+  padding: 30px;
+}
+
+.faq .question {
+  background: url(/projectB/image/icon_question.gif) no-repeat;
+  font-size: 20px;
+  line-height: 28px;
+
+  padding: 0 100px 0 40px;
+  font-weight: bold;
+  color: #1b1d21;
+}
+.faq .arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url(/projectB/image/icon_arrow_down.gif) no-repeat;
+  width: 100px;
+  height: 100%;
+  background-position: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+.faq .active .arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url(/projectB/image/icon_arrow_up.gif) no-repeat;
+  width: 100px;
+  height: 100%;
+  background-position: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+.faq .answer__box {
+  display: none;
+}
+.faq .active .answer__box {
+  display: block;
+  position: relative;
+  background-color: #f7f8fa;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.faq .answer {
+  background: url(/projectB/image/icon_answer.gif) no-repeat;
+  font-size: 16px;
+  line-height: 28px;
+  padding-left: 40px;
+  color: #60656e;
 }
 
 footer {
