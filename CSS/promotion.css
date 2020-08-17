@@ -139,7 +139,9 @@ header .img__wrap a {
 .store .list__wrap .item__img:hover .dimmed__layer {
   display: flex;
 }
-
+.store .list__wrap .item__img:focus .dimmed__layer {
+  display: flex;
+}
 .store .sale {
   font-size: 65px;
   line-height: 68px;
