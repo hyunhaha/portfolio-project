@@ -11,6 +11,7 @@ a {
 html,
 body,
 .wrap {
+  width: auto;
   position: relative;
 }
 
@@ -92,7 +93,7 @@ header .nav div::after {
   background-color: #f9939d;
   height: 822px;
 }
-.creator .img__wrap .img__box {
+.creator .img__wrap .creator__img__box {
   background: url(/image/section_creator.jpg) no-repeat;
   background-position: center;
   height: 822px;
@@ -106,33 +107,78 @@ header .nav div::after {
   overflow: hidden;
   margin: 0 auto;
 }
+.store .category {
+  text-align: center;
+  padding-top: 275px;
+}
+.store .category .category__btn {
+  background-color: #fff;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  padding: 4px 48px;
+  font-size: 16px;
+  line-height: 20px;
+}
+.store .category .category__btn:hover,
+.store .category .category__btn.active {
+  background-color: lemonchiffon;
+}
+
+.store .category .category__count {
+  display: inline-block;
+  color: #fff;
+  background-color: orange;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  position: relative;
+  top: -20px;
+  opacity: 0;
+  transition: all 300ms ease-in;
+}
+
+.category__btn.active .category__count,
+.category__btn:hover .category__count {
+  top: 0;
+  opacity: 1;
+}
 .store .list__wrap {
   position: relative;
   background: url(/image/section_store.jpg) no-repeat;
   background-position: center;
   height: 1084px;
+  margin: 0 auto;
 }
 .store .list__wrap .store__list {
   width: 980px;
   height: 740px;
   margin: 0 auto;
-  padding-top: 300px;
+  padding-top: 25px;
+  opacity: 1;
+  transition: all 300ms ease-out;
+}
+.store__list.anima__out {
+  opacity: 0;
+  transform: scale(0.96) translateY(30px);
 }
 .store .list__wrap li {
   float: left;
   position: relative;
 }
+.store .invisible {
+  display: none;
+}
+
 .store .list__wrap .store__list::after {
   content: "";
   clear: both;
   display: block;
 }
-.store .list__wrap li + li {
-  margin-left: 20px;
+.store .list__wrap li {
+  margin: 5px;
 }
-.store .list__wrap li:nth-child(4n + 1) {
-  margin-left: 0;
-}
+
 .store .list__wrap .item__img {
   position: relative;
   width: 230px;
@@ -257,7 +303,6 @@ header .nav div::after {
 .faq .faq__wrap {
   background-color: #fff;
   padding: 100px 0;
-  width: auto;
 }
 .faq h2 {
   background: url(/image/title_faq.gif) no-repeat;
@@ -265,8 +310,10 @@ header .nav div::after {
   height: 98px;
 }
 .faq ul {
-  width: 980px;
   margin: 0 auto;
+}
+.faq li {
+  position: relative;
 }
 .faq .content {
   position: relative;
@@ -283,6 +330,7 @@ header .nav div::after {
 }
 
 .faq .question {
+  width: inherit;
   background: url(/image/icon_question.gif) no-repeat;
   font-size: 20px;
   line-height: 28px;
@@ -333,14 +381,20 @@ header .nav div::after {
   color: #60656e;
 }
 .top {
+  display: none;
   position: fixed;
   bottom: 180px;
   right: 0;
   background: url(/image/go_top.gif);
   width: 100px;
   height: 100px;
+  cursor: pointer;
+}
+.reveal {
+  display: block;
 }
 footer {
+  width: 100%;
   background-color: #e0e4eb;
   color: #70757d;
   font-size: 18px;

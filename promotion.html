@@ -41,7 +41,7 @@
             </section>
             <section class="creator" id="creator">
                 <div class="img__wrap">
-                    <div class="img__box"></div>
+                    <div class="creator__img__box"></div>
                     <h2 class="blind">푸드위드 크리에이터</h2>
                     <p class="blind">자신만의 특별한 푸드 콘텐츠를 만들어 공유하면 당신도 푸드위드 크리에이터가 될 수 있어요</p>
                     <p class="blind">지금 바로 푸드위드 크리에이터에 도전해보세요!</p>
@@ -58,8 +58,26 @@
                         <h2 class="blind">푸드위드 스토어</h2>
                         <p class="blind">신선한 과일과 채소를 저렴한 가격으로 만날 수 있는 푸드위드 스토어!</p>
                         <p class="blind">이번주 타임 특가 할인율을 확인하세요</p>
+                        <div class="category">
+                            <button class="category__btn active" data-filter="*">ALL
+                                <span class="category__count">8</span>
+                            </button>
+                            <button class="category__btn" data-filter="20">20%
+                                <span class="category__count">2</span>
+                            </button>
+                            <button class="category__btn" data-filter="30">30%
+                                <span class="category__count">2</span>
+                            </button>
+                            <button class="category__btn" data-filter="50">50%
+                                <span class="category__count">2</span>
+                            </button>
+                            <button class="category__btn" data-filter="60">60%
+                                <span class="category__count">2</span>
+                            </button>
+
+                        </div>
                         <ol class="store__list">
-                            <li>
+                            <li class="store__item" data-type="30">
                                 <div class="item__img">
                                     <a class="item__link" href="#">
                                         <img src="/image/thumbnail_apple.jpg" alt="사과 이미지">
@@ -77,7 +95,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li>
+                            <li class="store__item" data-type="60">
                                 <div class="item__img">
                                     <a class="item__link" href="#">
                                         <img src="/image/thumbnail_onion.jpg" alt="양파 이미지">
@@ -95,7 +113,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li>
+                            <li class="store__item" data-type="20">
                                 <div class="item__img">
                                     <a class="item__link " href="#">
                                         <img src="/image/thumbnail_banana.jpg" alt="바나나 이미지">
@@ -113,7 +131,8 @@
                                     </div>
                                 </div>
                             </li>
-                            <li>
+                            <li class="store__item" data-type="50">
+
                                 <div class="item__img">
                                     <a class="item__link" href="#">
                                         <img src="/image/thumbnail_kiwi.jpg" alt="키위 이미지">
@@ -131,7 +150,8 @@
                                     </div>
                                 </div>
                             </li>
-                            <li>
+                            <li class="store__item" data-type="60">
+
                                 <div class="item__img">
                                     <a class="item__link " href="#">
                                         <img src="/image/thumbnail_broccoli.jpg" alt="브로콜리 이미지">
@@ -149,7 +169,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li>
+                            <li class="store__item" data-type="30">
                                 <div class="item__img">
                                     <a class="item__link " href="#">
                                         <img src="/image/thumbnail_lemon.jpg" alt="레몬 이미지">
@@ -167,7 +187,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li>
+                            <li class="store__item" data-type="20">
                                 <div class="item__img">
                                     <a class="item__link " href="#">
                                         <img src="/image/thumbnail_garlic.jpg" alt="마늘 이미지">
@@ -185,7 +205,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li>
+                            <li class="store__item" data-type="50">
                                 <div class="item__img">
                                     <a class="item__link " href="#">
                                         <img src="/image/thumbnail_tomato.jpg" alt="토마토 이미지">
@@ -322,7 +342,7 @@
                 </div>
             </section>
         </div>
-        <a href="#" class="top"><span class="blind">top</span></a>
+        <div class="top" data-link="#title"><span class="blind">top</span></div>
         <footer>
             © <span class="strong">foodwith </span> All Right Reserved.
         </footer>

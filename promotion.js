@@ -12,19 +12,22 @@ document.addEventListener('scroll', () => {
 })
 
 //네비게이션바 선택시 이동
-const navbar_menu = document.querySelector('.nav');
-navbar_menu.addEventListener('click', (event) => {
+function navbartosection(classname) {
+    const navbar_menu = document.querySelector(classname);
+    navbar_menu.addEventListener('click', (event) => {
 
-    const event_targat = event.target;
-    const link = event_targat.dataset.link;
-    if (link == null) {
-        return;
-    } else {
-        console.log(event.target.dataset.link);
-        const scrolltoview = document.querySelector(link);
-        scrolltoview.scrollIntoView({ behavior: "smooth" });
-    }
-})
+        const event_targat = event.target;
+        const link = event_targat.dataset.link;
+        if (link == null) {
+            return;
+        } else {
+            console.log(event.target.dataset.link);
+            const scrolltoview = document.querySelector(link);
+            scrolltoview.scrollIntoView({ behavior: "smooth" });
+        }
+    })
+}
+navbartosection('.nav');
 
 //레시피전체보기 선택시 이동
 const recipe = document.querySelector(".recipe__again");
@@ -36,14 +39,59 @@ recipe.addEventListener('click', (event) => {
     console.log(recipe__link);
     const scroll = document.querySelector(recipe__link);
     scroll.scrollIntoView({ behavior: "smooth" });
-})
+});
 
 //이미지 패이드아웃되게
+function opacity(classname) {
+    const title = document.querySelector(classname);
+    const title_height = title.getBoundingClientRect().height;
+    document.addEventListener('scroll', () => {
+        console.log(`title h ${title_height}`);
+        console.log(`window${window.scrollY}`)
+        title.style.opacity = 1 - window.scrollY / title_height;
+    });
+}
+opacity('.title__img__box');
+//opacity('.creator__img__box')
 
+
+//top내비게이션 버튼
+const top__nav = document.querySelector(".top");
 const title = document.querySelector(".title__img__box");
-const title_height = title.getBoundingClientRect().height;
+const title_h = title.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
-    console.log(`title h ${title_height}`);
-    console.log(`window${window.scrollY}`)
-    title.style.opacity = 1 - window.scrollY / title_height;
-})
+    if (scrollY > title_h) {
+        top__nav.classList.add('reveal');
+    } else {
+        top__nav.classList.remove('reveal');
+    }
+});
+
+navbartosection(".top");
+
+const category__bar = document.querySelector(".category");
+const store__items = document.querySelector(".store__list");
+const item = document.querySelectorAll('.store__item')
+
+category__bar.addEventListener('click', (event) => {
+    const store__filter = event.target.dataset.filter || event.target.parentNode.dataset.filter;
+    if (store__filter == null) {
+        return;
+    }
+    store__items.classList.add('anima__out');
+
+    setTimeout(() => {
+        item.forEach((item) => {
+            console.log(item.dataset.type);
+            if (item.dataset.type === store__filter || store__filter === '*') {
+                item.classList.remove('invisible');
+            } else {
+                item.classList.add('invisible');
+            }
+        })
+        store__items.classList.remove('anima__out');
+    }, 300);
+    // //const store__link = store__item.target.dataset.type;
+    // console.log(store__filter);
+    // // console.log(store__link);
+});
