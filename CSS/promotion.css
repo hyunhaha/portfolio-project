@@ -351,7 +351,7 @@ header .nav div::after {
   border: none;
   outline: none;
 }
-.faq .active .arrow {
+.faq .arrow.open {
   position: absolute;
   top: 0;
   right: 0;
@@ -366,7 +366,7 @@ header .nav div::after {
 .faq .answer__box {
   display: none;
 }
-.faq .active .answer__box {
+.faq .answer__box.open {
   display: block;
   position: relative;
   background-color: #f7f8fa;

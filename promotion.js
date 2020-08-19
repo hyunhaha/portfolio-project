@@ -117,3 +117,28 @@ category__bar.addEventListener('click', (event) => {
     }, 300);
 
 });
+
+//faq toggle button
+const faq__ul = document.querySelector('.list__ul')
+const faq__button = document.querySelectorAll('.arrow');
+const answer__box = document.querySelectorAll(".answer__box");
+console.log(`answerbox${answer__box[0]}`);
+
+faq__button.forEach((button) => {
+    button.addEventListener('click', (event) => {
+        const button = event.target.dataset.button;
+        answer__box.forEach(box => {
+            console.log(box.dataset.answer);
+            if (box.dataset.answer === button) {
+                box.classList.toggle('open');
+                return;
+            }
+        });
+        console.log(event.target);
+        const toggle__button = event.target;
+        toggle__button.classList.toggle('open');
+
+    });
+    console.log(`button${button.dataset.button}`);
+
+})
