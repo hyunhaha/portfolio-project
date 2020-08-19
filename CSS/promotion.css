@@ -68,6 +68,7 @@ header .nav div:hover {
 header .nav .active {
   border: 1px solid #000;
   border-radius: 5px;
+  background-color: gray;
 }
 header .nav div::after {
   display: block;
@@ -120,7 +121,7 @@ header .nav div::after {
   line-height: 20px;
 }
 .store .category .category__btn:hover,
-.store .category .category__btn.active {
+.store .category .category__btn.selected {
   background-color: lemonchiffon;
 }
 
@@ -138,7 +139,7 @@ header .nav div::after {
   transition: all 300ms ease-in;
 }
 
-.category__btn.active .category__count,
+.category__btn.selected .category__count,
 .category__btn:hover .category__count {
   top: 0;
   opacity: 1;

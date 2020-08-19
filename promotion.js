@@ -9,7 +9,7 @@ document.addEventListener('scroll', () => {
     } else {
         navbar.classList.remove('navbar--dark');
     }
-})
+});
 
 //네비게이션바 선택시 이동
 function navbartosection(classname) {
@@ -25,9 +25,25 @@ function navbartosection(classname) {
             const scrolltoview = document.querySelector(link);
             scrolltoview.scrollIntoView({ behavior: "smooth" });
         }
-    })
+    });
 }
 navbartosection('.nav');
+
+//네비게이션 엑티브
+
+const icon = document.querySelector(".nav");
+icon.addEventListener('click', (event) => {
+    console.log(`icon ${icon}`)
+    const link = event.target.dataset.link;
+
+    if (link == null) {
+        return;
+    }
+    const active = document.querySelector('.icon.active')
+    active.classList.remove('active');
+    event.target.classList.add('active');
+});
+
 
 //레시피전체보기 선택시 이동
 const recipe = document.querySelector(".recipe__again");
@@ -60,6 +76,7 @@ const top__nav = document.querySelector(".top");
 const title = document.querySelector(".title__img__box");
 const title_h = title.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
+
     if (scrollY > title_h) {
         top__nav.classList.add('reveal');
     } else {
@@ -69,12 +86,19 @@ document.addEventListener('scroll', () => {
 
 navbartosection(".top");
 
+
+//item filtering
 const category__bar = document.querySelector(".category");
 const store__items = document.querySelector(".store__list");
 const item = document.querySelectorAll('.store__item')
 
 category__bar.addEventListener('click', (event) => {
     const store__filter = event.target.dataset.filter || event.target.parentNode.dataset.filter;
+
+    const selected = document.querySelector('.category__btn.selected');
+    selected.classList.remove('selected');
+    const target = event.target.nodeName === 'BUTTON' ? event.target : event.target.parentNode;
+    target.classList.add('selected');
     if (store__filter == null) {
         return;
     }
@@ -91,7 +115,5 @@ category__bar.addEventListener('click', (event) => {
         })
         store__items.classList.remove('anima__out');
     }, 300);
-    // //const store__link = store__item.target.dataset.type;
-    // console.log(store__filter);
-    // // console.log(store__link);
+
 });
