@@ -58,17 +58,35 @@ recipe.addEventListener('click', (event) => {
 });
 
 //이미지 패이드아웃되게
-function opacity(classname) {
-    const title = document.querySelector(classname);
-    const title_height = title.getBoundingClientRect().height;
-    document.addEventListener('scroll', () => {
-        console.log(`title h ${title_height}`);
-        console.log(`window${window.scrollY}`)
-        title.style.opacity = 1 - window.scrollY / title_height;
+// function opacity(classname) {
+//     const title = document.querySelector(classname);
+//     const title_height = title.getBoundingClientRect().height;
+//     document.addEventListener('scroll', () => {
+//         console.log(`title h ${title_height}`);
+//         console.log(`window${window.scrollY}`)
+//         title.style.opacity = 1 - window.scrollY / title_height;
+//     });
+// }
+// opacity('.title__img__box');
+// // opacity('.creator__img__box')
+
+const back__img = document.querySelectorAll('section');
+const back__img__arr = [];
+
+back__img.forEach(item => {
+    const back__img__h = item.getBoundingClientRect().height;
+    console.log(`back img type ${typeof (back__img__h)}`);
+    back__img__arr.push(back__img__h);
+    console.log(`backimg arr ${back__img__arr}`);
+    // h_add += back__img__h;
+    const h_add = back__img__arr.reduce(function (previousitem, currentitem, index, arry) {
+        return previousitem + currentitem;
     });
-}
-opacity('.title__img__box');
-//opacity('.creator__img__box')
+    console.log(h_add);
+    document.addEventListener('scroll', () => {
+        item.style.opacity = 1 - (window.scrollY - h_add + back__img__h) / back__img__h;
+    });
+});
 
 
 //top내비게이션 버튼
