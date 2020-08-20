@@ -360,7 +360,7 @@ header .nav div::after {
 
 .faq .question {
   width: inherit;
-  background: url(/image/icon_question.gif) no-repeat;
+  background: url(../image/icon_question.gif) no-repeat;
   font-size: 20px;
   line-height: 28px;
   font-weight: bold;
@@ -371,7 +371,7 @@ header .nav div::after {
   position: absolute;
   top: 0;
   right: 0;
-  background: url(/image/icon_arrow_down.gif) no-repeat;
+  background: url(../image/icon_arrow_down.gif) no-repeat;
   width: 100px;
   height: 100%;
   background-position: center;
@@ -383,7 +383,7 @@ header .nav div::after {
   position: absolute;
   top: 0;
   right: 0;
-  background: url(/image/icon_arrow_up.gif) no-repeat;
+  background: url(../image/icon_arrow_up.gif) no-repeat;
   width: 100px;
   height: 100%;
   background-position: center;
