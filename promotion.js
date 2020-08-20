@@ -32,8 +32,9 @@ navbartosection('.nav');
 //네비게이션 엑티브
 
 const icon = document.querySelector(".nav");
-icon.addEventListener('click', (event) => {
-    console.log(`icon ${icon}`)
+const navbar__icon = document.querySelector('.nav');
+navbar__icon.addEventListener('click', (event) => {
+    console.log(`navbar__icon ${navbar__icon}`)
     const link = event.target.dataset.link;
 
     if (link == null) {
@@ -42,6 +43,14 @@ icon.addEventListener('click', (event) => {
     const active = document.querySelector('.icon.active')
     active.classList.remove('active');
     event.target.classList.add('active');
+    icon.classList.remove('active');
+});
+
+//navbar toggle button active
+const navbar__toggle = document.querySelector('.menu__toggle');
+
+navbar__toggle.addEventListener('click', (event) => {
+    navbar__icon.classList.toggle('active');
 });
 
 
@@ -57,23 +66,17 @@ recipe.addEventListener('click', (event) => {
     scroll.scrollIntoView({ behavior: "smooth" });
 });
 
-//이미지 패이드아웃되게
-// function opacity(classname) {
-//     const title = document.querySelector(classname);
-//     const title_height = title.getBoundingClientRect().height;
-//     document.addEventListener('scroll', () => {
-//         console.log(`title h ${title_height}`);
-//         console.log(`window${window.scrollY}`)
-//         title.style.opacity = 1 - window.scrollY / title_height;
-//     });
-// }
-// opacity('.title__img__box');
-// // opacity('.creator__img__box')
-
+//scroll fade out
 const back__img = document.querySelectorAll('section');
 const back__img__arr = [];
 
 back__img.forEach(item => {
+    console.log(`item ${item}`)
+    console.log(`getelementgy classname ${item.classList.contains('faq')}`)
+    if (item.classList.contains('faq') || item.classList.contains('store') || item.classList.contains('recipe')) {
+        return;
+    }
+
     const back__img__h = item.getBoundingClientRect().height;
     console.log(`back img type ${typeof (back__img__h)}`);
     back__img__arr.push(back__img__h);
@@ -160,3 +163,5 @@ faq__button.forEach((button) => {
     console.log(`button${button.dataset.button}`);
 
 })
+
+
