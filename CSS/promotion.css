@@ -49,7 +49,7 @@ header .header__wrap {
 
 header .img__wrap a {
   display: block;
-  background: url(/image/logo.png) no-repeat;
+  background: url(../image/logo.png) no-repeat;
   height: 66px;
   width: 110px;
   background-position: center;
@@ -103,7 +103,7 @@ header .nav div::after {
 }
 
 .title .img__wrap .title__img__box {
-  background: url(/image/section_invite.jpg) no-repeat;
+  background: url(../image/section_invite.jpg) no-repeat;
   background-position: center;
   height: 750px;
 }
@@ -112,7 +112,7 @@ header .nav div::after {
   height: 822px;
 }
 .creator .img__wrap .creator__img__box {
-  background: url(/image/section_creator.jpg) no-repeat;
+  background: url(../image/section_creator.jpg) no-repeat;
   background-position: center;
   height: 822px;
 }
@@ -163,7 +163,7 @@ header .nav div::after {
 }
 .store .list__wrap {
   position: relative;
-  background: url(/image/section_store.jpg) no-repeat;
+  background: url(../image/section_store.jpg) no-repeat;
   background-position: center 0;
   /* height: 1084px; */
   margin: 0 auto;
@@ -278,7 +278,7 @@ header .nav div::after {
   position: relative;
 
   height: 1030px;
-  background-image: url(/image/pattern_recipe.png);
+  background-image: url(../image/pattern_recipe.png);
   background-repeat: repeat-x;
   background-position: center;
   max-width: 1920px;
@@ -286,7 +286,7 @@ header .nav div::after {
 }
 .recipe .recipe__img {
   position: relative;
-  background: url(/image/section_recipe.png) no-repeat;
+  background: url(../image/section_recipe.png) no-repeat;
   background-position: center 30%;
   height: 1030px;
 }
