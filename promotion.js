@@ -21,7 +21,7 @@ function navbartosection(classname) {
         if (link == null) {
             return;
         } else {
-            console.log(event.target.dataset.link);
+            // console.log(event.target.dataset.link);
             const scrolltoview = document.querySelector(link);
             scrolltoview.scrollIntoView({ behavior: "smooth" });
         }
