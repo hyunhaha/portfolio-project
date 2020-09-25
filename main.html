@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="CSS/reset.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <script defer src="main.html"></script>
+
+    <title>promotion</title>
+</head>
+
+<body>
+    <header id="navbar">
+        <div class="header__wrap">
+            <div class="img__wrap">
+                <a href="#">
+                    <span class="blind">Foodwith</span>
+                </a>
+
+            </div>
+            <div class="nav">
+                <div class="icon active" data-link="#title">main</div>
+                <div class="icon" data-link="#creator">creator</div>
+                <div class="icon" data-link="#store">store</div>
+                <div class="icon" data-link="#recipe">recipe</div>
+                <div class="icon" data-link="#faq">FAQ</div>
+            </div>
+            <button class="menu__toggle">button</button>
+        </div>
+
+    </header>
+    <div class="wrap">
+        <div class="section__wrap">
+            <section class="title" id="title">
+                <div class="img__wrap">
+                    <div class="title__img__box"></div>
+                    <h1 class="blind">Foodwidth에 여러분을 초대합니다!</h1>
+                    <p class="blind">Foodwith가 정식 오픈하였습니다.</p>
+                    <p class="blind">레시피뿐만 아니라 푸드 크리에이터, 푸드 비즈니스, 푸드 스토어 등 다양한 소식을 지금 확인해보세요.</p>
+                </div>
+            </section>
+            <section class="creator" id="creator">
+                <div class="img__wrap">
+                    <div class="creator__img__box"></div>
+                    <h2 class="blind">푸드위드 크리에이터</h2>
+                    <p class="blind">자신만의 특별한 푸드 콘텐츠를 만들어 공유하면 당신도 푸드위드 크리에이터가 될 수 있어요</p>
+                    <p class="blind">지금 바로 푸드위드 크리에이터에 도전해보세요!</p>
+                    <ol class="blind">
+                        <li>STEP 01 푸드위드에 신규 가입해주세요</li>
+                        <li>STEP 02 로그인 후 Work 메뉴를 클릭해주세요</li>
+                        <li>STEP 03 자신만의 푸드 콘텐츠를 올려주세요</li>
+                    </ol>
+                </div>
+            </section>
+            <section class="store" id="store">
+                <div class="store__wrap">
+                    <div class="list__wrap">
+                        <h2 class="blind">푸드위드 스토어</h2>
+                        <p class="blind">신선한 과일과 채소를 저렴한 가격으로 만날 수 있는 푸드위드 스토어!</p>
+                        <p class="blind">이번주 타임 특가 할인율을 확인하세요</p>
+                        <div class="category">
+                            <button class="category__btn selected" data-filter="*">ALL
+                                <span class="category__count">8</span>
+                            </button>
+                            <button class="category__btn" data-filter="20">20%
+                                <span class="category__count">2</span>
+                            </button>
+                            <button class="category__btn" data-filter="30">30%
+                                <span class="category__count">2</span>
+                            </button>
+                            <button class="category__btn" data-filter="50">50%
+                                <span class="category__count">2</span>
+                            </button>
+                            <button class="category__btn" data-filter="60">60%
+                                <span class="category__count">2</span>
+                            </button>
+
+                        </div>
+                        <ol class="store__list">
+                            <li class="store__item" data-type="30">
+                                <div class="item__img">
+                                    <a class="item__link" href="#">
+                                        <img src="image/thumbnail_apple.jpg" alt="사과 이미지">
+                                    </a>
+                                    <a class="dimmed__layer" href="#">
+                                        <div class="sale">30%</div>
+                                        <div class="sale__time">00:00 ~ 03:00</div>
+                                    </a>
+                                </div>
+                                <div class="item__info">
+                                    <div class="item__info__title ">꿀사과</div>
+                                    <div class="item__info__price">
+                                        <span class="price__num">8,900</span>
+                                        <span class="price__won">원</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="store__item" data-type="60">
+                                <div class="item__img">
+                                    <a class="item__link" href="#">
+                                        <img src="image/thumbnail_onion.jpg" alt="양파 이미지">
+                                    </a>
+                                    <a class="dimmed__layer" href="#">
+                                        <div class="sale">60%</div>
+                                        <div class="sale__time">04:00 ~ 06:00</div>
+                                    </a>
+                                </div>
+                                <div class="item__info">
+                                    <div class="item__info__title">친환경 양파</div>
+                                    <div class="item__info__price">
+                                        <span class="price__num">2,900</span>
+                                        <span class="price__won">원</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="store__item" data-type="20">
+                                <div class="item__img">
+                                    <a class="item__link " href="#">
+                                        <img src="image/thumbnail_banana.jpg" alt="바나나 이미지">
+                                    </a>
+                                    <a class="dimmed__layer " href="#">
+                                        <div class="sale">20%</div>
+                                        <div class="sale__time">07:00 ~ 09:00</div>
+                                    </a>
+                                </div>
+                                <div class="item__info">
+                                    <div class="item__info__title">제주 직송 유기농 바나…</div>
+                                    <div class="item__info__price">
+                                        <span class="price__num">33,900</span>
+                                        <span class="price__won">원</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="store__item" data-type="50">
+
+                                <div class="item__img">
+                                    <a class="item__link" href="#">
+                                        <img src="image/thumbnail_kiwi.jpg" alt="키위 이미지">
+                                    </a>
+                                    <a class="dimmed__layer" href="#">
+                                        <div class="sale">50%</div>
+                                        <div class="sale__time">10:00 ~ 12:00</div>
+                                    </a>
+                                </div>
+                                <div class="item__info">
+                                    <div class="item__info__title">국내산 키위</div>
+                                    <div class="item__info__price">
+                                        <span class="price__num">16,900</span>
+                                        <span class="price__won">원</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="store__item" data-type="60">
+
+                                <div class="item__img">
+                                    <a class="item__link " href="#">
+                                        <img src="image/thumbnail_broccoli.jpg" alt="브로콜리 이미지">
+                                    </a>
+                                    <a class="dimmed__layer" href="#">
+                                        <div class="sale">60%</div>
+                                        <div class="sale__time">13:00 ~ 15:00</div>
+                                    </a>
+                                </div>
+                                <div class="item__info">
+                                    <div class="item__info__title">유기농 브로콜리</div>
+                                    <div class="item__info__price">
+                                        <span class="price__num">2,480</span>
+                                        <span class="price__won">원</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="store__item" data-type="30">
+                                <div class="item__img">
+                                    <a class="item__link " href="#">
+                                        <img src="image/thumbnail_lemon.jpg" alt="레몬 이미지">
+                                    </a>
+                                    <a class="dimmed__layer" href="#">
+                                        <div class="sale">30%</div>
+                                        <div class="sale__time">16:00 ~ 18:00</div>
+                                    </a>
+                                </div>
+                                <div class="item__info">
+                                    <div class="item__info__title">본사 직영 레몬</div>
+                                    <div class="item__info__price">
+                                        <span class="price__num">14,900</span>
+                                        <span class="price__won">원</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="store__item" data-type="20">
+                                <div class="item__img">
+                                    <a class="item__link " href="#">
+                                        <img src="image/thumbnail_garlic.jpg" alt="마늘 이미지">
+                                    </a>
+                                    <a class="dimmed__layer" href="#">
+                                        <div class="sale">20%</div>
+                                        <div class="sale__time">19:00 ~ 21:00</div>
+                                    </a>
+                                </div>
+                                <div class="item__info">
+                                    <div class="item__info__title">국내산 마늘</div>
+                                    <div class="item__info__price">
+                                        <span class="price__num">10,900</span>
+                                        <span class="price__won">원</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="store__item" data-type="50">
+                                <div class="item__img">
+                                    <a class="item__link " href="#">
+                                        <img src="image/thumbnail_tomato.jpg" alt="토마토 이미지">
+                                    </a>
+                                    <a class="dimmed__layer" href="#">
+                                        <div class="sale">50%</div>
+                                        <div class="sale__time">22:00 ~ 24:00</div>
+                                    </a>
+                                </div>
+                                <div class="item__info">
+                                    <div class="item__info__title">정품 완숙 토마토</div>
+                                    <div class="item__info__price">
+                                        <span class="price__num">19,900</span>
+                                        <span class="price__won">원</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+            <section class="recipe" id="recipe">
+                <div class="recipe__wrap">
+                    <div class="recipe__img">
+                        <h2 class="blind">푸드위드 레시피</h2>
+                        <p class="blind">엄선된 유명 셰프들의 레시피도 보고 여러분의 최고의 음식을 만들어보세요</p>
+                        <p class="blind">당신도 셰프가 될 수 있어요</p>
+                        <div class="recipe__link">
+                            <div class="link__box"><a href="#">
+                                    <h3 class="blind">노오븐 딸기 케이크</h3>
+                                    <p class="blind">오븐 없이 빠른 시간 내 예쁜 컵 케이크를 만들 수 있어요</p>
+                                    <p class="blind">밀가루와 달걀, 물, 치즈크림, 설탕, 설탕시럽, 생크림만
+                                        준비해주세요.</p>
+                                </a></div>
+                            <div class="link__box"><a href="#">
+                                    <h3 class="blind">바나나 푸딩 타르트</h3>
+                                    <p class="blind">푸딩처럼 부드러운 바나나 크림이 더해진 타르트예요. </p>
+                                    <p class="blind">박력분, 버터, 물, 계란, 소금, 우유, 생크림, 설탕, 바나나, 바닐라 오일을 준비해주세요.</p>
+                                </a></div>
+                            <div class="look__recipe">
+                                <div class="recipe__again" data-link="#title"><span class="blind">레시피보기</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="faq" id="faq">
+                <div class="faq__wrap">
+                    <h2><span class="blind">FAQ</span></h2>
+                    <div class="list__wrap">
+                        <ul class='list__ul'>
+                            <li>
+                                <div class="content active">
+                                    <div class="question__arrow__box">
+                                        <div class="question">
+                                            푸드 파트너가 되려면 어떻게 해야 하나요? 푸드위드 회원인 경우 푸드 파트너를 따로 신청하지 않아도 되나요?
+                                        </div>
+                                        <button class="arrow" data-button="1"><span class="blind">열림</span></button>
+                                    </div>
+                                    <div class="answer__box" data-answer="1">
+                                        <div class="answer">
+                                            푸드위드에 가입해주세요. 가입 후 푸드파트너 메뉴에 신청해주시면 자격 조건을 확인 후 파트너가 될 수 있어요.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content active">
+                                    <div class="question__arrow__box">
+                                        <div class="question">
+                                            아이디와 비밀번호를 잊어버렸어요
+                                        </div>
+                                        <button class="arrow" data-button="2"><span class="blind">열림</span></button>
+                                    </div>
+                                    <div class="answer__box" data-answer="2">
+                                        <div class="answer">
+                                            로그인 화면 내 [아이디 찾기], [비밀번호 찾기]를 클릭해 주세요. <br>
+                                            회원정보에 있는 이메일로 임시 비밀번호를 전송해드립니다. <br>
+                                            보안을 위해 임시 비밀번호 로그인 후 비밀번호를 재설정해주세요. <br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content">
+                                    <div class="question__arrow__box">
+                                        <div class="question">
+                                            레시피에 사용한 제품을 알고 싶어요
+                                        </div>
+                                        <button class="arrow" data-button="3"><span class="blind">닫힘</span></button>
+                                    </div>
+                                    <div class="answer__box" data-answer="3">
+                                        <div class="answer">
+                                            레시피 하단에 사용한 제품 정보를 확인할 수 있어요. <br>
+                                            또한 푸드 스토어에서도 확인 가능할 뿐만 아니라 구매도 가능해요.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content">
+                                    <div class="question__arrow__box">
+                                        <div class="question">
+                                            레시피를 저장하고 싶어요
+                                        </div>
+                                        <button class="arrow" data-button="4"><span class="blind">닫힘</span></button>
+                                    </div>
+                                    <div class="answer__box" data-answer="4">
+                                        <div class="answer">
+                                            레시피를 북마크 하시려면 로그인 후 마이페이지 북마크 메뉴에서 확인하실 수 있어요
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content">
+                                    <div class="question__arrow__box">
+                                        <div class="question">
+                                            푸드 크리에이터는 상시 신청이 가능한가요?
+                                        </div>
+                                        <button class="arrow" data-button="5"><span class="blind">닫힘</span></button>
+                                    </div>
+                                    <div class="answer__box" data-answer="5">
+                                        <div class="answer">
+                                            회원가입 후 월 4건 이상 푸드 콘텐츠를 제작해 주세요. <br>
+                                            조건에 한하여 상시로 푸드 크리에이터 자격이 수여되고 있어요.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="top" data-link="#title"><span class="blind">top</span></div>
+        <footer>
+            © <span class="strong">foodwith </span> All Right Reserved.
+        </footer>
+    </div>
+</body>
+
+</html>
